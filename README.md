@@ -1,6 +1,8 @@
 Visit: https://sa1123.github.io/alarm-clock/
 
-![Opera Snapshot_2022-12-04_182231_127 0 0 1](https://user-images.githubusercontent.com/51375919/205491741-5e5c7c59-cb74-4652-b691-724002dfa76b.png)
+
+
+![Opera Snapshot_2022-12-04_191122_sa1123 github io](https://user-images.githubusercontent.com/51375919/205493885-05816a58-cb68-4115-bc8f-c37bd134a810.png)
 
 TEST NAME: Alarm Clock
 
