@@ -5,13 +5,13 @@ var mins = document.getElementById("min-optns");
 var secs = document.getElementById("secnds-optns");
 var time = document.getElementById("clock-time");
 
-// AUDIO FILE FOR RINGING
+// AUDIO FILE FOR ALARM SOUND
 var audio = new Audio("./audio.wav");
 
 // NOTIFICATION MESSAGE
 const AddMessage = "alarm is already set for this time";
 
-// alarm ARRAY FOR STORING ALL alarmS
+// ALARM ARRAY FOR STORING ALL ALARMS
 alarmArray=[];
 
 // EXTRACT CURRENT TIME AND SET THE CONTENT INSIDE THE HEADING TAG (UPDATED EVERY SECOND)
@@ -71,7 +71,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
-//CHECKING WHETHER THE CURRENTTIME HAS AN ALARM OR NOT FROM ARRAY IN EVERY SECONDS
+//CHECKING EVERY SECOND WHETHER THE CURRENTTIME HAS AN ALARM FOR IT OR NOT FROM ARRAY
 var checkalarm = setInterval(function(){
    
     if(alarmArray.includes(time.innerText)==true)
@@ -82,7 +82,7 @@ var checkalarm = setInterval(function(){
     }
 },1000)
 
-// ADD THE ZEROS AT THE BEGINNING FOR LESS THAN 10
+// ADD ZEROS AT THE BEGINNING FOR <10
 function addZero(number)
 {
     if(number<10)
