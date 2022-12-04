@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <!-- NOTIFICATION ALERT -->
+    <div id='alert'></div>
+    <!-- CURRENT TIME ON LOAD -->
+    <div id='clock'>
+        <h1 id='clock-time'></h1>
+    </div>
+    <!-- DETAIL-CONTAINER FOR TIME INPUT FOR SET ALARM-->
+    <div id="container">
+        <!-- HOURS DROPDOWN -->
+        <div>
+             <label for="hrs-optns">Hours</label>
+            <select id="hrs-optns">   
+                <!-- DYANMICALLY ADD OPTIONS THROUGH JS -->
+            </select>
+        </div>
+          <!-- MINUTES DROPDOWN --> 
+        <div>
+            <label for="min-optns">Minutes</label>
+            <select id="min-optns">  
+                 <!-- DYANMICALLY ADD OPTIONS THROUGH JS -->
+            </select>
+        </div>
+          <!-- SECONDS DROPDOWN -->  
+        <div>
+            <label for="secnds-optns">Seconds</label>
+            <select id="secnds-optns">
+                 <!-- DYANMICALLY ADD OPTIONS THROUGH JS -->
+            </select>
+        </div>
+        <!-- SET ALARM BUTTON -->
+        <div>
+            <button id="set-alrm">Set Alarm</button>
+        </div>
+    </div>
+    <!-- LIST OF UPCOMING ALARMS -->
+    <div id='list-ctn'>
+        <ul class='alrm-list'>
+             <!-- DYANMICALLY ADD/REMOVE ALARM WITH DELETE AND SET BUTTON THROUGH JS -->
+            
+        </ul>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

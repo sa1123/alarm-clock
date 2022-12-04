@@ -1,0 +1,215 @@
+/* BODY OF PAGE */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #131419;
+}
+
+/* CURRENT TIME DIV */
+#clock{
+    height: 16vh;
+    width: 35vh;
+    font-size: 27px;
+    background: #131419;
+    border: 0.01em solid blue;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+/* HEADING TAG OF CURRENT TIME */
+#clock-time{
+  color: red;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* DETAIL CONTAINER WHICH CONTAINS HOURS:MINUTES:SECONDS:AM/PM INPUT ALONG WITH BUTTONS */
+#container{
+    height:10vh;
+    width:70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* ALL DIV DIMESNIONS INSIDE THE CONTAINER */
+#container>div{
+    height:100%;
+    width:15%;
+}
+
+/* ALL THE LABEL STYLE INSIDE THE CONTAINER */
+label{
+    font-size: 1.4rem;
+    color: blue;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ALL THE SELECT/OPTIONS STYLE INSIDE THE CONTAINER */
+select{
+    height: 40%;
+    width: 100%;
+    border: 1px solid red;
+    background-color:#131419;
+    color:blue;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 15px;
+}
+
+/* SET ALRAM BUTTON */
+#set-alrm{
+    height:75%;
+    width: 120%;
+    margin-top: 10px;
+    color: blue;
+    border: 0.25em solid red;
+     background-color:#131419;
+}
+
+/* LIST OF UPCOMING ALRAM CONTAINER */
+#list-ctn{
+    width:70vh;
+    height:50vh;
+}
+
+/* UNORDERED LIST OF ALRAMS */
+.alrm-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* EACH ALRAM ITEMS INSIDE THE LIST CONTAINER */
+.alrm-list >li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+     --c: blue;
+    color: var(--c);
+    border: 0.25px solid var(--c);
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+li>span{
+    min-height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+/* STOP BUTTONS AND DELETE BUTTONS */
+span>button{
+    height: 100%;
+    width: 85%;
+    --c: blue;
+    color: var(--c);
+    border: 0.25px solid var(--c);
+    background: black;
+    
+}
+/* NOTIFICATION ALERT */
+#alert{
+    min-height: 50px;
+    min-width: 350px;
+    position: fixed;
+    z-index: 1;
+    left: 37%;
+    top: 30px;
+    z-index: 1;
+    color: blue;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    visibility: hidden;
+    background-color: black;
+    font-family: 'Rouge Script', cursive; 
+}
+
+/* ON TRIGGERR IT WILL SHOW WITH ANIMATIONS */
+#alert.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+
+/* MEDIA QUERYS */
+@media only screen and (max-width: 400px) {
+
+    body{
+        color:blanchedalmond;
+        background-color: blanchedalmond;
+    }
+    #clock{
+        font-size: 17px;
+    }
+    #container{
+        justify-content: none;
+    }
+    label{
+        font-size: 17px;
+    }
+    select{
+        font-size: 12px;
+        padding: 2px;
+    }
+}
+
+@media only screen and (max-height:440px){
+    #clock{
+        font-size: 9px;
+        width: 50vh;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width:1250px){
+    /* body{
+        background-color: yellow;
+        font-size: 20px;
+    } */
+    #clock{
+        font-size: 17px;
+    }
+    label{
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    select{
+        font-size: 12px;
+        padding: 1px;
+    }
+    #fav-alert{
+        min-height: 50px;
+        min-width: 150px;
+        left:10%;
+    } 
+}
