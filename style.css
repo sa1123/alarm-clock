@@ -13,7 +13,7 @@ body{
     width: 35vh;
     font-size: 27px;
     background: #131419;
-    border: 0.01em solid blue;
+    border: 0.25em solid blue;
     text-align: center;
     margin-bottom: 15px;
     border-radius: 2px;
@@ -25,7 +25,7 @@ body{
   font-family: 'Orbitron', sans-serif;
 }
 
-/* DETAIL CONTAINER WHICH CONTAINS HOURS:MINUTES:SECONDS:AM/PM INPUT ALONG WITH BUTTONS */
+/* DETAIL CONTAINER WHICH CONTAINS HOURS:MINUTES:SECONDS INPUT ALONG WITH BUTTONS */
 #container{
     height:10vh;
     width:70vh;
@@ -35,7 +35,7 @@ body{
     flex-wrap: wrap;
 }
 
-/* ALL DIV DIMESNIONS INSIDE THE CONTAINER */
+/* ALL DIV DIMENSIONS INSIDE THE CONTAINER */
 #container>div{
     height:100%;
     width:15%;
@@ -43,7 +43,7 @@ body{
 
 /* ALL THE LABEL STYLE INSIDE THE CONTAINER */
 label{
-    font-size: 1.4rem;
+    font-size: 1.32rem;
     color: blue;
     font-family: 'Orbitron', sans-serif;
 }
@@ -60,7 +60,7 @@ select{
     font-size: 15px;
 }
 
-/* SET ALRAM BUTTON */
+/* SET ALARM BUTTON */
 #set-alrm{
     height:75%;
     width: 120%;
@@ -70,13 +70,13 @@ select{
      background-color:#131419;
 }
 
-/* LIST OF UPCOMING ALRAM CONTAINER */
+/* LIST OF UPCOMING ALARM CONTAINER */
 #list-ctn{
     width:70vh;
     height:50vh;
 }
 
-/* UNORDERED LIST OF ALRAMS */
+/* UNORDERED LIST OF ALARMS */
 .alrm-list{
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ select{
     text-align: center;
 }
 
-/* EACH ALRAM ITEMS INSIDE THE LIST CONTAINER */
+/* EACH ALARM ITEMS INSIDE THE LIST CONTAINER */
 .alrm-list >li{
     display: flex;
     flex-direction: row;
@@ -108,10 +108,9 @@ li>span{
 /* STOP BUTTONS AND DELETE BUTTONS */
 span>button{
     height: 100%;
-    width: 85%;
-    --c: blue;
-    color: var(--c);
-    border: 0.25px solid var(--c);
+    width: 65%;
+    color: red;
+    border: 0.25px solid blue;
     background: black;
     
 }
@@ -133,7 +132,7 @@ span>button{
     font-family: 'Rouge Script', cursive; 
 }
 
-/* ON TRIGGERR IT WILL SHOW WITH ANIMATIONS */
+/* ON TRIGGER IT WILL SHOW WITH ANIMATIONS */
 #alert.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
