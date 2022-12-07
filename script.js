@@ -9,17 +9,17 @@ var time = document.getElementById("clock-time");
 var audio = new Audio("./audio.wav");
 
 // NOTIFICATION MESSAGE
-const AddMessage = "alarm is already set for this time";
+const AddMessage = "An alarm is already set for this time";
 
 // ALARM ARRAY FOR STORING ALL ALARMS
 alarmArray=[];
 
 // EXTRACT CURRENT TIME AND SET THE CONTENT INSIDE THE HEADING TAG (UPDATED EVERY SECOND)
 var currentTime = setInterval(function(){
-      var date = new Date();
+      var date = new Date(); // Date Constructor
       currhours=date.getHours();
       currmins=date.getMinutes();
-      currsecs= date.getSeconds();
+      currsecs=date.getSeconds();
       time.textContent=addZero(currhours)+":"+addZero(currmins)+":"+addZero(currsecs);
 },1000)
 
@@ -71,7 +71,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
-//CHECKING EVERY SECOND WHETHER THE CURRENTTIME HAS AN ALARM FOR IT OR NOT FROM ARRAY
+//CHECKING EVERY SECOND WHETHER THE CURRENT TIME HAS AN ALARM FOR IT OR NOT
 var checkalarm = setInterval(function(){
    
     if(alarmArray.includes(time.innerText)==true)
